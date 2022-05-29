@@ -8,14 +8,14 @@ import static java.sql.DriverManager.getConnection;
 
 public class DataBaseHelper {
 
-    private DataBaseHelper() {
+    public DataBaseHelper() {
     }
 
     public static String getStatusPaymentWithoutCredit() {
         val statusSql = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
 
         try (
-                val connection = getConnection("jdbc:mysql://localhost:3306/app", "user", "pass");
+                val connection = getConnection("url", "user", "pass");
                 val statusStmt = connection.createStatement();
         ) {
             try (val rs = statusStmt.executeQuery(statusSql)) {
@@ -35,7 +35,7 @@ public class DataBaseHelper {
         val statusSql = "SELECT status FROM credit_request_entity ORDER BY created DESC LIMIT 1";
 
         try (
-                val connection = getConnection("jdbc:mysql://localhost:3306/app", "user", "pass");
+                val connection = getConnection("url", "user", "pass");
                 val statusStmt = connection.createStatement();
         ) {
             try (val rs = statusStmt.executeQuery(statusSql)) {
@@ -58,7 +58,7 @@ public class DataBaseHelper {
         val orders = "DELETE FROM order_entity";
 
         try (
-                val connection = getConnection("jdbc:mysql://localhost:3306/app", "user", "pass");
+                val connection = getConnection("url", "user", "pass");
                 val prepareStatPay = connection.createStatement();
                 val prepareStatCredit = connection.createStatement();
                 val prepareStatOrder = connection.createStatement();
