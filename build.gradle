@@ -24,13 +24,12 @@ repositories {
 
 dependencies {
 
-    testImplementation 'com.codeborne:selenide:5.19.0'
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.7.1'
+    testImplementation 'com.codeborne:selenide:5.23.1'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.7.2'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.23'
     testImplementation 'com.github.javafaker:javafaker:1.0.1'
     testImplementation 'io.qameta.allure:allure-selenide:2.14.0'
-    testImplementation 'com.google.code.gson:gson:2.8.6'
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
 
 }
@@ -40,6 +39,6 @@ test {
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
     systemProperty 'url', System.getProperty('url')
     systemProperty 'user', System.getProperty('user')
-    systemProperty 'pass', System.getProperty('pass')
+    systemProperty 'password', System.getProperty('password')
 
 }
