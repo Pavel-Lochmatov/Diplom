@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.9.6'
+
 }
 
 group 'ru.netology'
@@ -31,6 +32,9 @@ dependencies {
     testImplementation 'com.github.javafaker:javafaker:1.0.1'
     testImplementation 'io.qameta.allure:allure-selenide:2.14.0'
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+
 
 }
 
@@ -39,6 +43,6 @@ test {
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
     systemProperty 'url', System.getProperty('url')
     systemProperty 'user', System.getProperty('user')
-    systemProperty 'password', System.getProperty('password')
+    systemProperty 'pass', System.getProperty('pass')
 
 }

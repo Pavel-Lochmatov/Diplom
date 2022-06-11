@@ -8,7 +8,6 @@ services:
     volumes:
       - ./data:/var/lib/mysql
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=app
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pass
@@ -20,7 +19,6 @@ services:
     volumes:
       - ./data:/varpostgres/lib/postgresql
     environment:
-      - POSTGRES_RANDOM_ROOT_PASSWORD=yes
       - POSTGRES_DB=appps
       - POSTGRES_USER=userps
       - POSTGRES_PASSWORD=passps
