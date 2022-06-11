@@ -6,11 +6,11 @@
 
 прогон тестов с базами данных MySql , Postgres
 
-<image src="pic1.jpg" alt="названия неуспешных тестов">
+<image src="/images/pic1.jpg" alt="названия неуспешных тестов">
 
-<image src="pic2.jpg" alt="название пакета">
+<image src="/images/pic2.jpg" alt="название пакета">
 
-<image src="pic3.jpg" alt="названия классов">
+<image src="/images/pic3.jpg" alt="названия классов">
 
 
 
